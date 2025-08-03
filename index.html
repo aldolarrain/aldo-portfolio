@@ -1,87 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aldo Hugo Larraín | IT Project Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldo Hugo Larraín | Project Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
             background-color: #0b0c2a;
-            color: white;
+            color: #fff;
+            line-height: 1.6;
+            padding-bottom: 40px;
         }
         header {
-            background: #1a1a40;
-            padding: 40px;
             text-align: center;
+            padding: 50px 20px 30px;
+            background-color: #1a1a40;
+        }
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #b794f4;
+            margin-bottom: 20px;
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.4em;
             color: #b794f4;
+            font-weight: 800;
         }
         header p {
-            font-size: 1.2em;
             color: #ccc;
+            font-size: 1.1em;
         }
         section {
-            max-width: 900px;
+            max-width: 960px;
             margin: 40px auto;
             padding: 0 20px;
         }
         h2 {
             color: #b794f4;
+            font-size: 1.6em;
+            margin-bottom: 15px;
             border-bottom: 2px solid #b794f4;
             padding-bottom: 5px;
         }
-        .experience, .education, .skills, .certs, .contact {
-            margin-top: 40px;
-        }
-        ul li {
-            margin-bottom: 10px;
+        .card {
+            background: #1c1c3a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
         a {
             color: #b794f4;
             text-decoration: none;
         }
+        .buttons a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
+            background: #b794f4;
+            color: #0b0c2a;
+            padding: 10px 16px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .buttons a:hover {
+            background: #a27df2;
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="https://aldolarrain.github.io/aldo-portfolio/1746285504024.jpg" alt="Aldo Larrain Profile">
         <h1>Aldo Hugo Larraín Otálora</h1>
         <p>Project Manager | ERP (Odoo & SAP) | AI & Digital Transformation</p>
     </header>
-    <section class="experience">
+
+    <section>
+        <h2>About Me</h2>
+        <div class="card">
+            <p>I’m an IT Project Manager with a focus on ERP implementation, digital transformation, and artificial intelligence. I’ve led Odoo and SAP projects across multiple industries, driving operational efficiency and scalable results through Agile leadership and a strategic mindset.</p>
+        </div>
+
         <h2>Experience</h2>
-        <ul>
-            <li><strong>Odoo Project Manager – Odoo Concept</strong> (2024 – Present)<br/>Led up to 5 ERP implementations, streamlined delivery, managed international teams.</li>
-            <li><strong>IT Support – DATEC LATAM</strong> (2024)<br/>Odoo support, SAP S/4HANA configuration, task management with ASANA.</li>
-            <li><strong>IT Project Manager – Ciclomundo</strong> (2023 – 2024)<br/>Directed eCommerce and Odoo ERP rollout, redesigned brand websites.</li>
-        </ul>
-    </section>
-    <section class="education">
+        <div class="card">
+            <strong>Project Manager – Odoo Concept</strong> (2024 – Present)<br>
+            Led 5 ERP implementations, streamlined delivery and coordinated international teams.
+        </div>
+        <div class="card">
+            <strong>IT Support – DATEC LATAM</strong> (2024)<br>
+            Provided Odoo/SAP technical support, configured SAP S/4HANA and managed tasks via ASANA.
+        </div>
+        <div class="card">
+            <strong>IT Project Manager – Ciclomundo</strong> (2023 – 2024)<br>
+            Directed eCommerce transformation and Odoo ERP rollout; redesigned brand websites.
+        </div>
+
         <h2>Education</h2>
-        <ul>
-            <li><strong>MBA – Collège de Paris</strong><br/>Project Management with Artificial Intelligence (2024–2026)</li>
-            <li><strong>Bachelor – UPSA</strong><br/>Systems Engineering (2016–2022)</li>
-        </ul>
-    </section>
-    <section class="skills">
+        <div class="card">
+            <strong>MBA – Collège de Paris</strong><br>
+            Project Management with AI (2024–2026)
+        </div>
+        <div class="card">
+            <strong>Systems Engineering – UPSA</strong><br>
+            Universidad Privada de Santa Cruz de la Sierra (2016–2022)
+        </div>
+
         <h2>Skills</h2>
-        <p>Odoo, SAP S/4HANA, Python, Jira, Confluence, Slack, SuccessFactors, Agile, BPMN</p>
-    </section>
-    <section class="certs">
+        <div class="card">
+            Odoo, SAP S/4HANA, Python, Jira, Confluence, Slack, BPMN, SuccessFactors, Agile
+        </div>
+
         <h2>Certifications</h2>
-        <ul>
-            <li>Product Owner | Agile & Trello | Microsoft 365 Project Management</li>
-            <li>AI: Platzi, Python (IBM), SAP FIORI Admin, Excel Advanced</li>
-        </ul>
-    </section>
-    <section class="contact">
+        <div class="card">
+            Product Owner, Agile with Trello, Microsoft 365 PM, SAP FIORI, Python (IBM), AI (Platzi)
+        </div>
+
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:aldohugolarrain@gmail.com">aldohugolarrain@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/aldohugolarrain" target="_blank">/in/aldohugolarrain</a></p>
-        <p>GitHub: <a href="https://github.com/aldohugolarrain" target="_blank">github.com/aldohugolarrain</a></p>
+        <div class="card buttons">
+            <a href="mailto:aldohugolarrain@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/aldohugolarrain" target="_blank">LinkedIn</a>
+            <a href="https://github.com/aldohugolarrain" target="_blank">GitHub</a>
+        </div>
     </section>
 </body>
 </html>
