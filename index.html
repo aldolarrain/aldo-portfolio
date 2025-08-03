@@ -1,136 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldo Hugo Larraín | Project Manager</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b0c2a;
-            color: #fff;
-            line-height: 1.6;
-            padding-bottom: 40px;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px 30px;
-            background-color: #1a1a40;
-        }
-        header img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid #b794f4;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            font-size: 2.4em;
-            color: #b794f4;
-            font-weight: 800;
-        }
-        header p {
-            color: #ccc;
-            font-size: 1.1em;
-        }
-        section {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            color: #b794f4;
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #b794f4;
-            padding-bottom: 5px;
-        }
-        .card {
-            background: #1c1c3a;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        a {
-            color: #b794f4;
-            text-decoration: none;
-        }
-        .buttons a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-            background: #b794f4;
-            color: #0b0c2a;
-            padding: 10px 16px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .buttons a:hover {
-            background: #a27df2;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aldo Hugo Larraín | Project Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0c2a;
+      --bg-light: #f5f5f5;
+      --text-dark: #ffffff;
+      --text-light: #0b0c2a;
+      --accent: #b794f4;
+      --card-dark: #1c1c3a;
+      --card-light: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+      padding-bottom: 40px;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background-color: #1a1a40;
+    }
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.4em;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    header p {
+      color: #ccc;
+      font-size: 1.1em;
+    }
+    .toggle-bar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .toggle-bar button {
+      padding: 8px 14px;
+      background: var(--accent);
+      color: var(--text-light);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: var(--accent);
+      font-size: 1.6em;
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+    }
+    .card {
+      background: var(--card-dark);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s, color 0.3s;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-top: 10px;
+      background: var(--accent);
+      color: var(--text-light);
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background: #a27df2;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="https://aldolarrain.github.io/aldo-portfolio/1746285504024.jpg" alt="Aldo Larrain Profile">
-        <h1>Aldo Hugo Larraín Otálora</h1>
-        <p>Project Manager | ERP (Odoo & SAP) | AI & Digital Transformation</p>
-    </header>
+  <header>
+    <img src="https://aldolarrain.github.io/aldo-portfolio/1746285504024.jpg" alt="Aldo Larrain Profile">
+    <h1>Aldo Hugo Larraín Otálora</h1>
+    <p id="subtitle">Project Manager | ERP (Odoo & SAP) | AI & Digital Transformation</p>
+    <div class="toggle-bar">
+      <button onclick="toggleTheme()">🌗 Modo Claro/Oscuro</button>
+      <button onclick="toggleLanguage()">🌐 EN / ES</button>
+    </div>
+  </header>
 
-    <section>
-        <h2>About Me</h2>
-        <div class="card">
-            <p>I’m an IT Project Manager with a focus on ERP implementation, digital transformation, and artificial intelligence. I’ve led Odoo and SAP projects across multiple industries, driving operational efficiency and scalable results through Agile leadership and a strategic mindset.</p>
-        </div>
+  <section>
+    <h2 id="about-title">About Me</h2>
+    <div class="card" id="about-text">
+      <p>I’m an IT Project Manager with a focus on ERP implementation, digital transformation, and artificial intelligence. I’ve led Odoo and SAP projects across multiple industries, driving operational efficiency and scalable results through Agile leadership and a strategic mindset.</p>
+    </div>
 
-        <h2>Experience</h2>
-        <div class="card">
-            <strong>Project Manager – Odoo Concept</strong> (2024 – Present)<br>
-            Led 5 ERP implementations, streamlined delivery and coordinated international teams.
-        </div>
-        <div class="card">
-            <strong>IT Support – DATEC LATAM</strong> (2024)<br>
-            Provided Odoo/SAP technical support, configured SAP S/4HANA and managed tasks via ASANA.
-        </div>
-        <div class="card">
-            <strong>IT Project Manager – Ciclomundo</strong> (2023 – 2024)<br>
-            Directed eCommerce transformation and Odoo ERP rollout; redesigned brand websites.
-        </div>
+    <h2 id="exp-title">Experience</h2>
+    <div class="card">
+      <strong>Project Manager – Odoo Concept</strong> (2024 – Present)<br>
+      Led 5 ERP implementations, streamlined delivery and coordinated international teams.
+    </div>
+    <div class="card">
+      <strong>IT Support – DATEC LATAM</strong> (2024)<br>
+      Provided Odoo/SAP technical support, configured SAP S/4HANA and managed tasks via ASANA.
+    </div>
+    <div class="card">
+      <strong>IT Project Manager – Ciclomundo</strong> (2023 – 2024)<br>
+      Directed eCommerce transformation and Odoo ERP rollout; redesigned brand websites.
+    </div>
 
-        <h2>Education</h2>
-        <div class="card">
-            <strong>MBA – Collège de Paris</strong><br>
-            Project Management with AI (2024–2026)
-        </div>
-        <div class="card">
-            <strong>Systems Engineering – UPSA</strong><br>
-            Universidad Privada de Santa Cruz de la Sierra (2016–2022)
-        </div>
+    <h2 id="edu-title">Education</h2>
+    <div class="card">
+      <strong>MBA – Collège de Paris</strong><br>
+      Project Management with AI (2024–2026)
+    </div>
+    <div class="card">
+      <strong>Systems Engineering – UPSA</strong><br>
+      Universidad Privada de Santa Cruz de la Sierra (2016–2022)
+    </div>
 
-        <h2>Skills</h2>
-        <div class="card">
-            Odoo, SAP S/4HANA, Python, Jira, Confluence, Slack, BPMN, SuccessFactors, Agile
-        </div>
+    <h2 id="skills-title">Skills</h2>
+    <div class="card">
+      Odoo, SAP S/4HANA, Python, Jira, Confluence, Slack, BPMN, SuccessFactors, Agile
+    </div>
 
-        <h2>Certifications</h2>
-        <div class="card">
-            Product Owner, Agile with Trello, Microsoft 365 PM, SAP FIORI, Python (IBM), AI (Platzi)
-        </div>
+    <h2 id="certs-title">Certifications</h2>
+    <div class="card">
+      Product Owner, Agile with Trello, Microsoft 365 PM, SAP FIORI, Python (IBM), AI (Platzi)
+    </div>
 
-        <h2>Contact</h2>
-        <div class="card buttons">
-            <a href="mailto:aldohugolarrain@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/aldohugolarrain" target="_blank">LinkedIn</a>
-            <a href="https://github.com/aldohugolarrain" target="_blank">GitHub</a>
-        </div>
-    </section>
+    <h2 id="contact-title">Contact</h2>
+    <div class="card buttons">
+      <a href="mailto:aldohugolarrain@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/aldohugolarrain" target="_blank">LinkedIn</a>
+      <a href="https://github.com/aldohugolarrain" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = root.style.getPropertyValue('--bg-dark') === getComputedStyle(root).getPropertyValue('--bg-dark');
+      root.style.setProperty('--bg-dark', isDark ? '#f5f5f5' : '#0b0c2a');
+      root.style.setProperty('--text-dark', isDark ? '#0b0c2a' : '#ffffff');
+      root.style.setProperty('--card-dark', isDark ? '#ffffff' : '#1c1c3a');
+    }
+
+    function toggleLanguage() {
+      const en = {
+        subtitle: 'Project Manager | ERP (Odoo & SAP) | AI & Digital Transformation',
+        'about-title': 'About Me',
+        'about-text': `I’m an IT Project Manager with a focus on ERP implementation, digital transformation, and artificial intelligence. I’ve led Odoo and SAP projects across multiple industries, driving operational efficiency and scalable results through Agile leadership and a strategic mindset.`,
+        'exp-title': 'Experience',
+        'edu-title': 'Education',
+        'skills-title': 'Skills',
+        'certs-title': 'Certifications',
+        'contact-title': 'Contact'
+      };
+
+      const es = {
+        subtitle: 'Gerente de Proyectos | ERP (Odoo y SAP) | IA y Transformación Digital',
+        'about-title': 'Acerca de mí',
+        'about-text': `Soy Gerente de Proyectos TI, especializado en implementación de ERP, transformación digital e inteligencia artificial. He liderado proyectos con Odoo y SAP en diversos sectores, mejorando la eficiencia operativa y logrando resultados escalables mediante liderazgo ágil y enfoque estratégico.`,
+        'exp-title': 'Experiencia',
+        'edu-title': 'Educación',
+        'skills-title': 'Habilidades',
+        'certs-title': 'Certificaciones',
+        'contact-title': 'Contacto'
+      };
+
+      const current = document.getElementById('about-title').innerText === 'About Me' ? es : en;
+
+      for (let id in current) {
+        document.getElementById(id).innerText = current[id];
+      }
+    }
+  </script>
 </body>
 </html>
